@@ -4,7 +4,7 @@ local strings = require("plenary.strings")
 local os_home = vim.loop.os_homedir()
 
 local zs = {
-  program = os.getenv("ZUUL_SEARCH_BIN_PATH") or "zuul-search"),
+  program = os.getenv("ZUUL_SEARCH_BIN_PATH") or "zuul-search",
 }
 
 local shorten_path = function(path)
