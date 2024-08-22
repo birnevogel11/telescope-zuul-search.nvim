@@ -50,8 +50,8 @@ zs.jobs = function(subcommand)
     return {
       value = args[1],
       path = shorten_path(args[2]),
-      lnum = tonumber(args[3]),
-      col = tonumber(args[4]),
+      lnum = tonumber(args[3]) + 1,
+      col = tonumber(args[4]) + 1,
       ordinal = args[1],
     }
   end
@@ -80,8 +80,8 @@ zs.project_templates = function(subcommand)
     return {
       value = args[1],
       path = shorten_path(args[2]),
-      lnum = tonumber(args[3]),
-      col = tonumber(args[4]),
+      lnum = tonumber(args[3]) + 1,
+      col = tonumber(args[4]) + 1,
       ordinal = args[1],
     }
   end
@@ -99,8 +99,8 @@ zs.job_vars = function(job_name)
       zuul_job_name = args[2],
       assigned_value = args[3],
       path = shorten_path(args[4]),
-      lnum = tonumber(args[5]),
-      col = tonumber(args[6]),
+      lnum = tonumber(args[5]) + 1,
+      col = tonumber(args[6]) + 1,
     }
   end
   local widths = { value = 0, assigned_value = 0, zuul_job_name = 0 }
@@ -118,8 +118,8 @@ zs.workdir_vars = function()
       zuul_job_name = args[2],
       assigned_value = args[3],
       path = shorten_path(args[4]),
-      lnum = tonumber(args[5]),
-      col = tonumber(args[6]),
+      lnum = tonumber(args[5]) + 1,
+      col = tonumber(args[6]) + 1,
     }
   end
   local widths = { value = 0, assigned_value = 0, zuul_job_name = 0 }
